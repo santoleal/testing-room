@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorando SASS</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    
+<main class="principal">
+    <section class="principal__tarjetas">
+        <h2>Pasos para instalar SASS</h2>
+        <h3>El ambiente de exploración es VSCode</h3>
+        <ol>
+            <li>Siempre hacer backup de archivos css en caso de que ya existan (y se haga una migración de estilos a scss).</li>
+            <li>Crear carpeta/archivo main.scss</li>
+            <li>Abrir nueva terminal en VSCode.</li>
+            <li>Iniciar npm init. Aceptar y crear package.json</li>
+            <li>Crear script "start (nombre opcional): 'sass --watch sass/main.scss:css/style.css' " y editar metadata a criterio. No olvidar guardar cambios.</li>
+            <li>En el caso anterior, yo coloqué arbitrariamente la ruta para que sean compilados los css. Se debe cambiar de acuerdo a cada proyecto.</li>
+            <li>Iniciar la compilación con el comando: npm start.</li>
+            <li>Para finalizar la compilación, desde terminal presionar [ CTRL-C ].</li>
+        </ol>
+    </section>
+
+
+    <section class="principal__tarjetas">
+        <h2>Iniciarse en el uso de SASS</h2>
+        <h3>Un ayudamemoria y algunas recomendaciones.</h3>
+        <ol>
+            <li>En arhivo prinipal de SASS -en mi caso, main.scss-, comenzar por importar todos los archivos modulares a usar en SASS.</li>
+            <li>Estos archivos deben crearse con un guión bajo al comienzo "_". Por ejemplo, "_menu.scss", o "_footer.scss". De eso se trata la modulación, para generar mayor claridad del área que afecta.</li>
+            <li>Para importar, se hace a través de "@import './nombre_de_archivo'".</li>
+            <li>Los primeros archivos en ser importados son las variables y luego los mixins.</li>
+
+
+        </ol>
+
+    </section>
+</main>
+
+
+
+
+</body>
+</html>

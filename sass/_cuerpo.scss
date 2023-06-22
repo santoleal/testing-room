@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    margin: 10px auto;
+    width: 100%;
+}
+
+.principal {
+
+    width: 80%;
+    background-color: brown;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        &__tarjetas {
+            background-color: black;
+            border-radius: 10px;
+            color: white;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        h2 {
+            font-size: x-large;
+            text-transform: uppercase;
+            padding: 10px 0;
+        }
+
+        h3 {
+            text-decoration: overline red;
+        }
+
+        ol {
+            margin: 0 10%;
+            padding: 10px;
+        }
+
+        li {
+            padding: 3px 0;
+        }
+
+        li:hover {
+            background-color: yellow;
+            color: black;
+        }
+
+        li:hover::marker {
+            color: yellow;
+            font-weight: bold;
+        }
+}

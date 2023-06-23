@@ -1,0 +1,11 @@
+{
+  "name": "modulos_css",
+  "version": "1.0.0",
+  "description": "Este es un espacio de experimentación y creación de módulos reutilizables en CSS, usando SASS.",
+  "main": "index.js",
+  "scripts": {
+    "start": "sass --watch scss/main.scss:css/style.css"
+  },
+  "author": "Felipelealarancibia.cl",
+  "license": "ISC"
+}

@@ -72,7 +72,8 @@ a {
 abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
-  text-decoration: underline dotted; /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -322,6 +323,7 @@ main {
   flex-wrap: wrap;
 }
 .principal__tarjetas {
+  width: -moz-min-content;
   width: min-content;
   height: 100%;
   background-color: black;
@@ -338,7 +340,8 @@ main {
   text-align: center;
 }
 .principal h3 {
-  text-decoration: overline red;
+  -webkit-text-decoration: overline red;
+          text-decoration: overline red;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   text-align: center;
 }
@@ -368,6 +371,4 @@ footer nav {
   font-size: x-small;
   display: flex;
   flex-direction: row;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=main.css.map */

@@ -1,8 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
 main {
     margin: 10px auto;
     width: 100%;
@@ -16,9 +11,12 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    flex-wrap: wrap;
+
 
         &__tarjetas {
+            width: min-content;
+            height: 100%;
             background-color: black;
             border-radius: 10px;
             color: white;
@@ -27,31 +25,37 @@ main {
         }
 
         h2 {
-            font-size: x-large;
+            font-size: xx-large;
             text-transform: uppercase;
             padding: 10px 0;
+            font-family: $fuente_titulos;
+            text-align: center;
         }
 
         h3 {
             text-decoration: overline red;
+            font-family: $fuente_titulos;
+            text-align: center;
         }
 
         ol {
-            margin: 0 10%;
+            margin: 10px 30px;
             padding: 10px;
-        }
+            font-family: $fuente_numeracion;
+        
 
-        li {
-            padding: 3px 0;
-        }
+            li {
+                padding: 5px 0;
+            }
 
-        li:hover {
-            background-color: yellow;
-            color: black;
-        }
+            li:hover {
+                background-color: yellow;
+                color: black;
+            }
 
-        li:hover::marker {
-            color: yellow;
-            font-weight: bold;
+            li:hover::marker {
+                color: yellow;
+                font-weight: bold;
+            }
         }
 }

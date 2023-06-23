@@ -1,0 +1,11 @@
+{
+  "name": "manual_sass",
+  "version": "1.0.0",
+  "description": "Manual con información sobre SASS, y aplicando algunos elementos que voy aprendiendo en el camino.",
+  "main": "index.js",
+  "scripts": {
+    "start": "sass --watch sass/main.scss:css/style.css"
+  },
+  "author": "felipelealarancibia.cl / contesys.cl",
+  "license": "ISC"
+}

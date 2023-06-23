@@ -29,7 +29,7 @@
         <h2>Iniciarse en el uso de SASS</h2>
         <h3>Un ayudamemoria y algunas recomendaciones.</h3>
         <ol>
-            <li>En arhivo prinipal de SASS -en mi caso, main.scss-, comenzar por importar todos los archivos modulares a usar en SASS.</li>
+            <li>En arhivo principal de SASS -en mi caso, main.scss-, comenzar por importar todos los archivos modulares a usar en SASS.</li>
             <li>Estos archivos deben crearse con un guión bajo al comienzo "_". Por ejemplo, "_menu.scss", o "_footer.scss". De eso se trata la modulación, para generar mayor claridad del área que afecta.</li>
             <li>Para importar, se hace a través de "@import './nombre_de_archivo'".</li>
             <li>Los primeros archivos en ser importados son las variables y luego los mixins.</li>
@@ -38,9 +38,203 @@
         </ol>
 
     </section>
+
+    <section class="principal__tarjetas">
+        <h2>Sintáxtis: Nesting o anidación</h2>
+        <h3>Sutil diferencia con CSS, vinculada estrechamente a la estructura HTML.</h3>
+        <ol>
+            <li>El nesting es una forma de ordenar con identaciones.</li>
+            <li>El anidamiento es cuando dentro de una llave, un selector padre contiene a sus hijos.</li>
+            <li>Esta es una estructura más precisa.</li>
+            <li>La identación formal es de UN TAB o cuatro espacios. </li>
+            <li>Es similar a la estructura de anidación de los @media queries.</li>
+        </ol>
+    </section>
+
+    <section class="principal__tarjetas">
+        <h2>Sasscript</h2>
+        <h3>Su nombre especial para algo que se instuye...</h3>
+        <ol>
+            <li>Es el lenguaje de secuencia de comandos que se usa en SASS.</li>
+            <li>Se usa para variables, operaciones, funciones...</li>
+            <li>Esto logra mayor dinamismo y flexibilidad.</li>
+        </ol>
+
+    </section>
+
+    <section class="principal__tarjetas">
+        <h2>Importar</h2>
+        <h3>Una de las mejores características de SASS.</h3>
+        <ol>
+            <li>Con esto, SASS permite modularizar, separar archivos.</li>
+            <li>Archivo principal (por convención, "main.scss") sólo tendrá los archivos importados.</li>
+            <li>Esto aporta limpieza.</li>
+            <li>Se importa con @import './direccion_de_archivo.scss', antecedido por  un guió bajo "_nombre.scss".</li>
+        </ol>
+    </section>
+
+
+    <section class="principal__tarjetas">
+        <h2>Variables (vars)</h2>
+        <h3>Son sólo acotadas a propiedades específicas.</h3>
+        <ol>
+            <li>Una variable almacena valores, y sirven para ser reutilizadas en otros lugares del código.</li>
+            <li>Llevan el símbolo $.</li>
+            <li>Puede ser variable global o variable local.</li>
+            <li>La variable global está fuera del nesting, posiblemente en un archivo externo (en mi caso, "_variables.scss").</li>
+            <li>La variable local se describe dentro de los corchetes { } de cada selector donde se quiera usar la variable.</li>
+            
+        </ol>
+    </section>
+
+    <section class="principal__tarjetas">
+        <h2>Operaciones</h2>
+        <h3></h3>
+        <ol>
+            <li>Se pueden usar operaciones básicas.</li>
+            <li> Están los símbolos clásicos: "+", "-", "/" y "*", los cuales se utilizan después de cada atributo numérico.</li>
+        </ol>
+    </section>
+
+    <section class="principal__tarjetas">
+        <h2>Condicionales IF / ELSE</h2>
+        <h3>Depende de una condición (heureka!) para ejecutarse</h3>
+        <h5>Directiva IF...</h5>
+        <ol>
+            <li>Es una forma de control. Se ejecuta si la respuesta es TRUE.</li>
+        <h5>Directiva ELSE...</h5>
+            <li>En el caso que el IF sea FALSE, se puede ejecutar un ELSE...<br>
+            <br>
+            Ejemplo: <br>
+            @if $tamanio1 > $tamanio2 {<br>
+                color: black;
+            } else {<br>
+                color: red;
+            }</li>
+        </ol>
+
+    </section>
+
+    <section class="principal__tarjetas">
+        <h2>Condicionales: Bucles (ciclo for, o para)</h2>
+        <h3>Porción de código que se repite hasta cumplir una condición.</h3>
+        <ol>
+            <li>Sintaxis: @for </li>
+            <li>Palabras claves: THROUGH / TO. <br>
+            <br>@for $var from (inicio) to (final) { ... }. Se incluye el valor final. <br><br>
+            @for $var from (inicio) through (final) { ... }. Se excluye el valor final.</li>
+            <li>El (inicio) y (final) deben ser números enteros.</li>
+        </ol>
+
+    </section>
+
+    <section class="principal__tarjetas">
+        <h2>Directiva EACH</h2>
+        <h3>De cumplirse una pequeña característica se ejecuta una acción</h3>
+        <ol>
+            <li>Ideal en estilos repetitivos con pocas variaciones entre ellas.</li>
+            <li>En el bucle se puden indicar otros parámetros que los numñericos <br>
+            <br>Ejemplo: instagram, twitter, ... <br><br>
+            @each $red-social in face, insta, twitter {
+                .#{$red-social} {
+                    atributo:propiedad;
+                }
+            }
+            </li>
+        </ol>
+    </section>
+
+    <section class="principal__tarjetas">
+        <h2>Directiva MAPS</h2>
+        <h3>Permite construir objetos o entidad</h3>
+        <ol>
+            <li>Permite agrupar llaves y valores en un objeto.</li>
+            <li>Se puede complementar con un buclé.</li>
+            <li>Los objetos en programación son objetos en la vida real, con características concretas.</li>
+            <li>Permite diseñar un mapa: <br>
+                $nombre_de_mapa {
+                    llave1: valor1;
+                    llave2: valor2;
+                } <br>
+                Y luego se somete a un operador.
+            </li>
+            <li>O sea: <br>
+                @each $llave, $valor in $nombre_de_mapa { 
+                    .llave--#{$llave} {
+                        background: $valorX;...
+                    }
+                }  
+
+            </li>
+        </ol>
+    </section>
+
+    <section class="principal__tarjetas">
+        <h2>Directiva MAps-get()</h2>
+        <h3>Función que extrae elementos puntuales de los mapas</h3>
+        <ol>
+            <li>Busca los elementos que deseamos.</li>
+            <li>Ejemplo: <br>
+            .claseXX {
+                background: map-get($nombre_de_mapa, llaveX);
+            }
+            </li>
+        </ol>
+        </section>
+        
+        <section class="principal__tarjetas">
+            <h2>Directiva Extend</h2>
+            <h3>Comparte propiedades de un elemento de un selector a otro.</h3>
+            <ol>
+                <li>Es para cuando se comparte casi todo, meno algunis detalles.</li>
+                <li>Se basa en concepto de herencia.</li>
+                <li>Se llama dentro de las llaves { } con @extend .clase_llamada;</li>
+                <li>Luego se pueden agregar las propiedades particulares.</li>
+            </ol>
+        </section>
+
+        <section class="principal__tarjetas">
+            <h2>Directiva MIXIN e INCLUDE</h2>
+            <h3>Se va a retutilizar en todo el sitio</h3>
+            <ol>
+                <li>Sintaxis del @mixin: <br> @mixin nombre-del-mixin {
+                    propiedad: valor;
+                    propiedad: valor;
+                    ...
+                } </li>
+                <li>Sintaxis del @include: <br>
+                    selector {
+                        @include nombre-del-mixin;
+                    }
+                     </li>
+                <li>Permite pasar parámetros, variables a mixin.</li>
+                <li>En la misma línea, los mixin aceptan argumentos.</li>
+                <li>Ejemplo: <br> 
+                @mixin borde($ancho, $color) {
+                    borde: $ancho solid $color;
+                }
+
+                .argumento1 {
+                    @include borde(2px, #ccc); <br>
+                } <br>
+                .argumento2 {
+                    @include borde(4px, #fff);
+                }
+                
+                </li>
+            </ol>
+        </section>
+
+
+
+
+
+
 </main>
 
-
+<footer>
+    <nav></nav>
+</footer>
 
 
 </body>

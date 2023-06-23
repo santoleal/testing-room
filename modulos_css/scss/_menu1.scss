@@ -1,0 +1,33 @@
+.menu1 {
+    background-color: black;
+
+    nav {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        padding: 1em;
+    }  
+
+    &__1 {
+        border: 5px solid red;
+
+
+        ul {
+            list-style: none;
+            color: white;
+            display: flex;
+            justify-content: center;
+
+            li {
+                text-decoration: line-through;
+                padding: 1em;
+                font-size: x-large;
+                
+
+                &:hover {
+                    text-decoration: underline;
+                    color: aqua;
+                }
+            }
+        }
+    }
+}
+

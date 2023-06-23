@@ -1,10 +1,10 @@
 {
-  "name": "sass_exploring",
+  "name": "testing_room",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "sass --watch sass/main.scss:css/style.css"
+    "start": "sass --watch manual_sass/sass/main.scss:manual_sass/css/style.css"
   },
   "author": "",
   "license": "ISC"
